@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           create: (_) => AuthBloc(AuthService()),
         ),
         BlocProvider<ThemeBloc>(
-          create: (_) => ThemeBloc(LightEvent()),
+          create: (_) => ThemeBloc(LightTheme(), LightEvent()),
         ),
       ],
       child: BlocBuilder<ThemeBloc, ThemeState>(
