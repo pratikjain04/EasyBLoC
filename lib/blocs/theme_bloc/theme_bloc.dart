@@ -18,10 +18,8 @@ class ThemeBloc extends HydratedBloc<ThemeEvent, ThemeState> {
   // fetching ThemeState from json key 'theme'
   @override
   ThemeState fromJson(Map<String, dynamic> json) {
-    if (json['theme'] == 'dark')
-      return DarkTheme();
-    else
-      return LightTheme();
+    if (json['theme'] == 'dark') return DarkTheme();
+    return null;
   }
 
   // storing ThemeState in json key 'theme'
